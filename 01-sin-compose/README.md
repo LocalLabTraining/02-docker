@@ -28,10 +28,8 @@ BACKEND_URL=http://backend:3000/
 ## Ejecutar los contenedores
 
 ```bash
-docker run -d --name backend --network app-network --env-file .env backend
-docker logs -f backend # Esperar a que el contenedor se inicie
-docker run -d --name frontend --network app-network --env-file .env -p 8080:80 frontend
-docker logs -f frontend # Esperar a que el contenedor se inicie
+docker run -d --name backend --network app-network --env-file .env backend # Esperar a que el contenedor se inicie
+docker run -d --name frontend --network app-network --env-file .env -p 8080:80 frontend # Esperar a que el contenedor se inicie
 ```
 
 ## Verificar que los contenedores esten funcionando
