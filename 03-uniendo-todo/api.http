@@ -1,0 +1,33 @@
+### Get All todos
+GET http://localhost:3000/todos
+
+### Add a todo
+# @name AddTodo
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+    "title": "Todo 1",
+    "description": "Description 1"
+}
+
+### Get todo by id
+# Save the id of the todo to get
+@id = {{AddTodo.response.body.id}}
+GET http://localhost:3000/todos/{{id}}
+
+### Update a todo
+# Save the id of the todo to update
+@id = {{AddTodo.response.body.id}}
+PUT http://localhost:3000/todos/{{id}}
+Content-Type: application/json
+
+{
+    "title": "Todo 1 updated",
+    "description": "Description 1 updated"
+}
+
+### Delete a todo
+# Save the id of the todo to delete
+@id = {{AddTodo.response.body.id}}
+DELETE http://localhost:3000/todos/{{id}}
