@@ -5,10 +5,10 @@
 ```bash
 cd backend
 docker build -t backend .
-cd ..
+cd -
 cd frontend
 docker build -t frontend .
-cd ..
+cd -
 ```
 
 ## Crear network
